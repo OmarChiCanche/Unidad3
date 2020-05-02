@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Galeria</title>
+
+        <link rel="stylesheet" href="style.css">
+    
+        <style>
+              
+            #galeria {
+                margin: 1rem auto;
+                width:100%;
+                max-width:960px;
+                padding:0 20px 20px;
+                box-sizing: border-box;
+                column-count: 3;
+    
+                /* Espacio entre columnas */
+                -moz-column-gap: 20px;
+                -webkit-column-gap: 20px;
+                column-gap: 20px;
+                
+                /* Filete entre columnas */
+                /*-moz-column-rule: 1px solid #bbb;
+                -webkit-column-rule: 1px solid #bbb;
+                column-rule: 1px solid #bbb;*/
+    
+    
+            }
+            
+            #galeria header {
+                -webkit-column-span:all;
+                column-span:all;
+            }
+    
+            article {
+                background:#fff;
+                border-radius:5px;
+                border:1px solid #ccc;
+                margin:0 0 20px 0;
+                text-align: center;
+                max-width: 100%;
+                filter: opacity(70%);
+    
+                /*Evitamos que se corte al cambiar de columna*/
+                break-inside: avoid;
+                page-break-inside: avoid;         
+           
+            }
+            
+            article img {
+                width:100%;
+            }
+    
+            article:hover {
+                transition: .5s ease;
+                filter: opacity(100%);
+            }
+    
+            figure {
+                padding:1rem;
+                box-sizing: border-box;
+            }
+    
+     
+            /* Móviles en horizontal o tablets en vertical */
+            @media (max-width: 767px) { 
+                #galeria {
+                    columns:2;
+                }
+    
+            }
+            
+            /* Móviles en vertical */
+    
+            @media (max-width: 480px) {
+                #galeria {
+                    columns: 1;
+                }
+            }
+    
+        </style>
+</head>
+
+<body>
+	
+	<header id="main-header">
+		
+		<a id="logo-header" href="index.html">
+             <span class="site-name">FAST & FOOD</span>
+            
+            
+		</a> <!-- / #logo-header -->
+
+		<nav>
+			<ul>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="galeria2.html">Galeria</a></li>
+				<li><a href="#">Mapa de sitio</a></li>
+			</ul>
+		</nav><!-- / nav -->
+
+	</header><!-- / #main-header -->
+
+    <main>
+        <section id="galeria">
+        <header>
+            <h1>GALERIA</h1>
+        </header>
+        <article>
+         <!--   <a target="_blank" href="https://www.google.com/logos/2017/logo17/logo17.html?hl=es-419">
+                <figure>
+                    <img src="images/image1.jpg" />
+                    <figcaption>Imagen 1</figcaption>
+                </figure>
+            </a>
+        </article>
+        <article>
+                <a target="_blank" href="https://www.google.com/logos/2017/logo17/logo17.html?hl=es-419">
+                    <figure>
+                        <img src="images/image2.jpg" />
+                        <figcaption>Imagen 2</figcaption>
+                    </figure>
+                </a>
+            </article>
+            <article>
+                    <a target="_blank" href="https://www.google.com/logos/2017/logo17/logo17.html?hl=es-419">
+                        <figure>
+                            <img src="images/image3.jpg" />
+                            <figcaption>Imagen 3</figcaption>
+                        </figure>
+                    </a>
+                </article>
+            
+        <article>
+                <a target="_blank" href="https://www.google.com/logos/2017/logo17/logo17.html?hl=es-419">
+                    <figure>
+                        <img src="images/image4.jpg"/>
+                        <figcaption>Imagen 4</figcaption>
+                    </figure>
+                </a>
+            </article>
+
+            <article>
+            <a target="_blank" href="https://www.google.com/logos/2017/logo17/logo17.html?hl=es-419">
+                <figure>
+                    <img src="images/logo.png" />
+                    <figcaption>Imagen 5</figcaption>
+                </figure>
+            </a>
+        </article> -->
+        <div class="galeria">
+            <input type="radio" name="navegacion" id="_1" checked>
+            <input type="radio" name="navegacion" id="_2">
+            <input type="radio" name="navegacion" id="_3">
+            <input type="radio" name="navegacion" id="_4"> 
+            <img src="images/image1.jpg" width="300" height="400" alt="Galeria CSS 1" />
+            <img src="images/image2.jpg" width="300" height="400"  alt="Galeria CSS 2"  />
+            <img src="images/image3.jpg" width="300" height="400"  alt="Galeria CSS 3" />
+            <img src="images/image4.jpg" width="300" height="400"  alt="Galeria CSS 4" />
+          </div>
+          
+        </section>
+    </main>
+    
+	<footer id="main-footer">
+		<p>&copy; 2020 <a href="http://google.com">FastAndFood.com</a></p>
+	</footer> <!-- / #main-footer -->
+
+	
+</body>
+</html>
